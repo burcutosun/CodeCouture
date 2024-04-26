@@ -39,7 +39,7 @@ export default function Blog() {
           Problems trying to resolve the conflict between the two major
         </p>
       </div>
-      <div className="flex flex-col gap-[3rem] lg:flex-row lg:gap-2">
+      <div className="flex flex-col gap-[3rem] lg:flex-row lg:justify-center lg:gap-[10%]">
         {cardContent.map((card, index) => {
           return (
             <div key={index} className="p-[2rem] shadow-md">

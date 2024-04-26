@@ -68,7 +68,7 @@ export default function ProductCards() {
     },
   ];
   return (
-    <div className="w-screen h-[338rem] flex flex-col items-center lg:h-[104rem]">
+    <div className="w-screen h-[338rem] flex flex-col items-center lg:h-[100rem]">
       <div className="w-[18rem] mt-[4.5rem] my-[3rem] text-center">
         <h2 className="text-xl text-[#737373]">Featured Products</h2>
         <h3 className="font-bold text-2xl text-[#252B42]">

@@ -1,15 +1,12 @@
 import { Carousel } from "@material-tailwind/react";
 
-export default function CarouselContent() {
+export default function CarouselDefault() {
   return (
-    <Carousel
-      transition={{ duration: 2 }}
-      className="w-full h-[75rem] rounded-xl lg:h-[44rem]"
-    >
+    <Carousel className="w-screen h-[47rem] rounded-xl lg:h-[44rem]">
       <img
-        src="https://images.unsplash.com/photo-1497436072909-60f360e1d4b1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2560&q=80"
+        src=".\assets\hero\shop-hero-1-product-slide-1.jpg"
         alt="image 1"
-        className="h-full w-full object-cover"
+        className="h-full w-full object-cover lg:object-fill"
       />
       <img
         src="https://images.unsplash.com/photo-1493246507139-91e8fad9978e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2940&q=80"

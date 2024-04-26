@@ -18,11 +18,11 @@ export default function ProductCardItem(props) {
                 {product.discountedPrice}
               </span>
             </div>
-            <div>
+            <div className="flex gap-1.5">
               {product.productColors.map((item, index) => (
                 <span
                   key={index}
-                  className={`w-4 h-4 bg-[${item}] rounded-full`}
+                  className={`w-6 h-6 bg-[${item}] rounded-full`}
                 ></span>
               ))}
             </div>
