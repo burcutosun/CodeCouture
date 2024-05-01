@@ -1,9 +1,16 @@
 import { Link } from "react-router-dom/cjs/react-router-dom.min";
 
 export default function Footer() {
+  const path = window.location.pathname;
+  let footerStyle =
+    "flex flex-col gap-5 items-start p-[3rem] lg:flex-row lg:justify-between lg:px-[4rem]";
+  path === "/shop"
+    ? (footerStyle += " bg-white")
+    : (footerStyle += " bg-[#FAFAFA]");
+
   return (
     <div className="w-screen">
-      <div className="bg-[#FAFAFA] flex flex-col gap-5 items-start p-[3rem] lg:flex-row lg:justify-between lg:px-[4rem]">
+      <div className={footerStyle}>
         <h3 className="font-bold text-2xl text-[#252B42]">CodeCouture</h3>
         <div className="flex gap-4 items-center">
           <Link to="" className="">
