@@ -6,7 +6,7 @@ export default function Footer() {
     <div className="w-screen">
       <div
         className={`flex flex-col gap-5 items-start p-[3rem] lg:flex-row lg:justify-between lg:px-[4rem] ${
-          path === "/shop" ? "bg-white" : "bg-[#FAFAFA]"
+          path === "" ? "bg-[#FAFAFA]" : "bg-white"
         }`}
       >
         <h3 className="font-bold text-2xl text-[#252B42]">CodeCouture</h3>
