@@ -1,14 +1,16 @@
 /** @type {import('tailwindcss').Config} */
-import withMT from "@material-tailwind/react/utils/withMT";
 
-export default withMT({
+export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
-      screens: {
-        'custom': '1260px',
+      colors: {
+        'blue': '#23A6F0',
+        'green': '#23856D',
+        'orange': '#E77C40',
+        'navy': '#252B42'
       },
     },
   },
   plugins: [],
-});
+};

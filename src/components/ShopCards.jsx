@@ -20,14 +20,14 @@ export default function ShopCards() {
     },
   ];
   return (
-    <div className="w-screen h-[115rem] bg-[#FAFAFA] flex flex-col items-center lg:h-[50rem]">
-      <div className="w-[18rem] my-[3rem] text-center">
+    <div className="w-screen bg-[#FAFAFA] flex flex-col items-center py-[6rem] lg:px-[3rem]">
+      <div className="w-[18rem] mb-[4rem] text-center">
         <h2 className="font-bold text-2xl text-[#252B42]">EDITOR'S PICK</h2>
         <p className="text-sm text-[#737373]">
           Problems trying to resolve the conflict between{" "}
         </p>
       </div>
-      <div className="grid grid-cols-1 gap-4 lg:grid-cols-3">
+      <div className="grid grid-cols-1 gap-4 lg:grid-cols-3 lg:grid-rows-2">
         {categories.map((category, index) => {
           return (
             <ShopCardItem

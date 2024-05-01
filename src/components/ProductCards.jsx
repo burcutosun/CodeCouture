@@ -68,8 +68,8 @@ export default function ProductCards() {
     },
   ];
   return (
-    <div className="w-screen h-[338rem] flex flex-col items-center lg:h-[100rem]">
-      <div className="w-[18rem] mt-[4.5rem] my-[3rem] text-center">
+    <div className="w-screen flex flex-col items-center py-[6rem] lg:px-[3rem]">
+      <div className="w-[18rem] mb-[4rem] text-center">
         <h2 className="text-xl text-[#737373]">Featured Products</h2>
         <h3 className="font-bold text-2xl text-[#252B42]">
           BESTSELLER PRODUCTS

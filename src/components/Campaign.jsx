@@ -1,6 +1,6 @@
 export default function Campaign() {
   return (
-    <div className="w-screen h-[65rem] flex flex-col gap-8 justify-end lg:h-[43rem] lg:flex-row-reverse lg:gap-0">
+    <div className="w-screen flex flex-col gap-8 justify-end pt-[10rem] lg: lg:flex-row-reverse lg:gap-0 lg:pt-0">
       <div className="w-[15rem] flex flex-col gap-4 items-center mx-auto text-center lg:w-[50%] lg:justify-center lg:items-start lg:p-[5rem]">
         <h5 className="font-bold text-[#BDBDBD]">SUMMER 2020</h5>
         <h1 className="font-bold leading-[3.125rem] text-[2.5rem] text-[#252B42]">

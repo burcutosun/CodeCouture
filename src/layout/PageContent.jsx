@@ -1,18 +1,18 @@
-import Blog from "../components/Blog";
-import Campaign from "../components/Campaign";
-import Carousel from "../components/Carousel";
-import ProductCards from "../components/ProductCards";
-import ShopCards from "../components/ShopCards";
+import { Route, Switch } from "react-router-dom/cjs/react-router-dom.min";
+import ShopPage from "../pages/ShopPage";
+import HomePage from "../pages/HomePage";
 
 export default function PageContent() {
   return (
     <>
-      <Carousel />
-      <ShopCards />
-      <ProductCards />
-      <Carousel />
-      <Campaign />
-      <Blog />
+      <Switch>
+        <Route exact path="/shop">
+          <ShopPage />
+        </Route>
+        <Route exact path="/">
+          <HomePage />
+        </Route>
+      </Switch>
     </>
   );
 }

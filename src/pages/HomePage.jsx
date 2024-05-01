@@ -1,13 +1,18 @@
-import Footer from "../layout/Footer";
-import Header from "../layout/Header";
-import PageContent from "../layout/PageContent";
+import Blog from "../components/Blog";
+import Campaign from "../components/Campaign";
+import Carousel from "../components/Carousel";
+import ProductCards from "../components/ProductCards";
+import ShopCards from "../components/ShopCards";
 
 export default function HomePage() {
   return (
     <>
-      <Header />
-      <PageContent />
-      <Footer />
+      <Carousel />
+      <ShopCards />
+      <ProductCards />
+      <Carousel />
+      <Campaign />
+      <Blog />
     </>
   );
 }

@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom/cjs/react-router-dom.min";
+
 export default function ProductCardItem(props) {
   const { products } = props;
   return (
@@ -7,9 +9,9 @@ export default function ProductCardItem(props) {
           <img src={product.image} alt="" />
           <div className="flex flex-col gap-3 items-center justify-evenly p-4">
             <h5 className="font-bold text-[#252B42]">{product.title}</h5>
-            <a className="font-bold text-sm text-[#737373]">
+            <Link to="" className="font-bold text-sm text-[#737373]">
               {product.category}
-            </a>
+            </Link>
             <div>
               <span className="font-bold text-[#BDBDBD] mr-3">
                 {product.price}
@@ -22,7 +24,8 @@ export default function ProductCardItem(props) {
               {product.productColors.map((item, index) => (
                 <span
                   key={index}
-                  className={`w-6 h-6 bg-[${item}] rounded-full`}
+                  className={`w-6 h-6 rounded-full`}
+                  style={{ backgroundColor: `${item}` }}
                 ></span>
               ))}
             </div>
