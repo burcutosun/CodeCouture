@@ -31,8 +31,8 @@ export default function Blog() {
     },
   ];
   return (
-    <div className="w-screen flex flex-col items-center py-[5rem]">
-      <div className="w-[13.5rem] text-center mb-[4rem] lg:w-[43rem] lg:my-[6rem]">
+    <div className="w-screen flex flex-col items-center py-[5rem] lg:py-[6rem]">
+      <div className="w-[13.5rem] text-center mb-[4rem] lg:w-[43rem]">
         <h6 className="font-bold text-sm text-[#23A6F0]">Practice Advice</h6>
         <h2 className="font-bold leading-[3.125rem] text-[2.5rem] text-[#252B42]">
           Featured Products

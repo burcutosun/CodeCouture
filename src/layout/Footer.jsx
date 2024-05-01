@@ -3,7 +3,7 @@ import { Link } from "react-router-dom/cjs/react-router-dom.min";
 export default function Footer() {
   return (
     <div className="w-screen">
-      <div className="bg-[#FAFAFA] flex flex-col gap-5 items-center p-[3rem] lg:flex-row lg:justify-between lg:px-[4rem]">
+      <div className="bg-[#FAFAFA] flex flex-col gap-5 items-start p-[3rem] lg:flex-row lg:justify-between lg:px-[4rem]">
         <h3 className="font-bold text-2xl text-[#252B42]">CodeCouture</h3>
         <div className="flex gap-4 items-center">
           <Link to="" className="">
@@ -17,7 +17,7 @@ export default function Footer() {
           </Link>
         </div>
       </div>
-      <div className="w-full gap-6 grid grid-rows-4 px-[4rem] py-[5rem] lg:grid-rows-1 lg:grid-cols-[15%_15%_15%_15%_34%] lg:px-[8rem]">
+      <div className="w-full gap-6 grid grid-rows-4 px-[3rem] py-[5rem] lg:grid-rows-1 lg:grid-cols-[15%_15%_15%_15%_34%] lg:px-[8rem]">
         <div className="flex flex-col justify-between gap-4">
           <h5 className="font-bold text-[#252B42]">Company Info</h5>
           <Link
