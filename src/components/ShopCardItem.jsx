@@ -2,8 +2,7 @@ export default function ShopCardItem(props) {
   const { image, index, title } = props;
 
   let containerClass = "relative ";
-  containerClass += index === 3 ? "mb-0" : "mb-6";
-  containerClass += index > 1 ? "lg:row-span-2" : "lg:row-span-1";
+  containerClass += index > 1 ? "lg:row-span-1" : "lg:row-span-2";
 
   return (
     <div className={containerClass} key={index}>
