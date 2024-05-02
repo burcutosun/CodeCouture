@@ -1,6 +1,6 @@
 export default function Filter() {
   return (
-    <div className="flex flex-col gap-6 items-center justify-center p-[3rem] text-[#737373] lg:flex-row lg:justify-between">
+    <div className="flex flex-col gap-6 items-center justify-center p-[4rem] text-[#737373] lg:flex-row lg:justify-between">
       <p className="font-bold">Showing all 12 results</p>
       <div className="flex gap-8 items-center justify-center font-bold">
         <span>Views:</span>

@@ -137,7 +137,7 @@ export default function ProductCards() {
     headerStyle += " hidden";
   }
   return (
-    <div className="w-screen flex flex-col items-center py-[6rem] lg:px-[3rem]">
+    <div className="w-screen flex flex-col items-center py-[3rem] lg:px-[3rem]">
       <div className={headerStyle}>
         <h2 className="text-xl text-[#737373]">Featured Products</h2>
         <h3 className="font-bold text-2xl text-[#252B42]">
