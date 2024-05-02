@@ -3,9 +3,9 @@ import { Link } from "react-router-dom/cjs/react-router-dom.min";
 
 export default function Pagination() {
   return (
-    <div>
+    <div className="m-[3rem]">
       <nav
-        className="flex justify-center -space-x-px rounded-md shadow-sm"
+        className="flex justify-center -space-x-px rounded-md"
         aria-label="Pagination"
       >
         <Link
