@@ -1,7 +1,7 @@
 import ShopCardItem from "./ShopCardItem";
 
 export default function ShopCards() {
-  const categories = [
+  const categoriesHome = [
     {
       title: "MEN",
       image: "./assets/shop-cards/filter.png",
@@ -28,7 +28,7 @@ export default function ShopCards() {
         </p>
       </div>
       <div className="grid grid-cols-1 gap-4 lg:grid-cols-3 lg:grid-rows-2">
-        {categories.map((category, index) => {
+        {categoriesHome.map((category, index) => {
           return (
             <ShopCardItem
               image={category.image}
