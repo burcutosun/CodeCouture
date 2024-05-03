@@ -1,35 +1,8 @@
 import BlogCard from "./BlogCard";
 
 export default function Blog() {
-  const cardContent = [
-    {
-      image: "./assets/blog/unsplash_gEZkP23pLZ4.png",
-      tags: ["Google", "Trending", "New"],
-      title: "Loudest à la Madison #1 (L'integral)",
-      description:
-        "We focus on ergonomics and meeting you where you work. It's only a keystroke away.",
-      date: "22 April 2021",
-      commentCount: "10 comments",
-    },
-    {
-      image: "./assets/blog/unsplash_CuEvrPd3NYc.png",
-      tags: ["Google", "Trending", "New"],
-      title: "Loudest à la Madison #1 (L'integral)",
-      description:
-        "We focus on ergonomics and meeting you where you work. It's only a keystroke away.",
-      date: "22 April 2021",
-      commentCount: "10 comments",
-    },
-    {
-      image: "./assets/blog/unsplash_k0rVudBoB4c.png",
-      tags: ["Google", "Trending", "New"],
-      title: "Loudest à la Madison #1 (L'integral)",
-      description:
-        "We focus on ergonomics and meeting you where you work. It's only a keystroke away.",
-      date: "22 April 2021",
-      commentCount: "10 comments",
-    },
-  ];
+  const data = useContext(DataContext);
+  const { blogContent } = data;
   return (
     <div className="w-screen flex flex-col items-center py-[5rem] lg:py-[6rem]">
       <div className="w-[13.5rem] text-center mb-[4rem] lg:w-[43rem]">
@@ -42,7 +15,7 @@ export default function Blog() {
         </p>
       </div>
       <div className="flex flex-col gap-[2rem] xl:flex-row xl:justify-center lg:px-[5rem]">
-        <BlogCard content={cardContent} />
+        <BlogCard content={blogContent} />
       </div>
     </div>
   );

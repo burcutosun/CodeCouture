@@ -5,7 +5,7 @@ export default function ProductCardItem(props) {
   return (
     <>
       {products.map((product, index) => (
-        <div key={index}>
+        <Link key={index} to={`/productdetail/${product.id}`}>
           <img src={product.image} alt="" />
           <div className="flex flex-col gap-3 items-center justify-evenly p-4">
             <h5 className="font-bold text-[#252B42]">{product.title}</h5>
@@ -30,7 +30,7 @@ export default function ProductCardItem(props) {
               ))}
             </div>
           </div>
-        </div>
+        </Link>
       ))}
     </>
   );

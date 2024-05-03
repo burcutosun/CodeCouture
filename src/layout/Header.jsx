@@ -1,3 +1,9 @@
+import {
+  Bars3BottomRightIcon,
+  MagnifyingGlassIcon,
+  ShoppingCartIcon,
+} from "@heroicons/react/16/solid";
+import { HeartIcon, UserIcon } from "@heroicons/react/24/outline";
 import { Link } from "react-router-dom";
 export default function Header() {
   const navLinks = [
@@ -26,27 +32,42 @@ export default function Header() {
       to: "/pages",
     },
   ];
+  const userMenu = (
+    <div className="flex flex-col gap-5 items-center justify-end lg:flex-row">
+      <Link
+        to=""
+        className="flex gap-1 items-center text-center text-[#23A6F0]"
+      >
+        <UserIcon className="h-6 w-6 text-[#23A6F0]" />
+        Login / Register
+      </Link>
+      <Link to="">
+        <MagnifyingGlassIcon className="h-6 w-6 text-[#23A6F0]" />
+        {}
+      </Link>
+      <Link to="">
+        <ShoppingCartIcon className="h-6 w-6 text-[#23A6F0]" />
+        {}
+      </Link>
+      <Link to="">
+        <HeartIcon className="h-6 w-6 text-[#23A6F0]" />
+
+        {}
+      </Link>
+    </div>
+  );
   return (
     <>
-      <div className="w-screen flex flex-col lg:hidden">
-        <div className="flex justify-between px-[1.5rem] py-[2rem]">
-          <h3 className="font-bold text-2xl text-[#252B42]">CodeCouture</h3>
-          <div className="w-[8rem] flex justify-between self-stretch">
-            <Link to="">
-              <img src=".\assets\hero\nav\icn search .icn-xs.png" alt="" />
-            </Link>
-            <Link to="">
-              <img
-                src=".\assets\hero\nav\icn shopping-cart .icn-xs.png"
-                alt=""
-              />
-            </Link>
-            <Link to="">
-              <img src=".\assets\hero\nav\icn menu .icn-xs.png" alt="" />
-            </Link>
-          </div>
+      <div className="w-screen flex flex-col gap-5 lg:hidden pb-8">
+        <div className="flex justify-between px-[2rem] py-[2rem]">
+          <Link to="/" className="font-bold text-2xl text-[#252B42]">
+            CodeCouture
+          </Link>
+          <Link to="">
+            <Bars3BottomRightIcon className="h-6 w-6 text-black" />
+          </Link>
         </div>
-        <nav className="flex flex-col justify-between gap-[2rem] mx-auto my-[5rem] text-center text-[1.875rem] lg:hidden">
+        <nav className="flex flex-col justify-between gap-[2rem] mx-auto my-[2rem] text-center text-[1.875rem] lg:hidden">
           {navLinks.map((item, index) => {
             return (
               <Link key={index} to={item.to}>
@@ -55,6 +76,7 @@ export default function Header() {
             );
           })}
         </nav>
+        {userMenu}
       </div>
 
       <div className="hidden lg:grid grid-cols-3 w-screen p-5 bg-[#252B42] items-center justify-between font-bold text-white text-[0.9rem] px-[3rem]">
@@ -88,9 +110,9 @@ export default function Header() {
         </div>
       </div>
       <div className="hidden lg:grid grid-cols-3 w-screen h-[5rem] items-center justify-between font-bold leading-[1.5rem] text-center text-sm px-[3rem]">
-        <h3 className="font-bold text-2xl text-start text-[#252B42]">
+        <Link to="/" className="font-bold text-2xl text-start text-[#252B42]">
           CodeCouture
-        </h3>
+        </Link>
         <nav className="flex gap-1 items-center justify-evenly text-[#737373]">
           {navLinks.map((item, index) => {
             if (item === "Shop") {
@@ -109,24 +131,7 @@ export default function Header() {
             }
           })}
         </nav>
-        <div className="flex gap-5 items-center justify-end">
-          <Link to="" className="flex gap-1 items-center text-[#23A6F0]">
-            <img src=".\assets\hero\nav\user.svg" alt="Mail Icon" />
-            Login / Register
-          </Link>
-          <Link to="">
-            <img src=".\assets\hero\nav\search.svg" alt="Mail Icon" />
-            {}
-          </Link>
-          <Link to="">
-            <img src=".\assets\hero\nav\shop.svg" alt="Mail Icon" />
-            {}
-          </Link>
-          <Link to="">
-            <img src=".\assets\hero\nav\favorite.svg" alt="Mail Icon" />
-            {}
-          </Link>
-        </div>
+        {userMenu}
       </div>
     </>
   );

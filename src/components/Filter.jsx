@@ -1,14 +1,16 @@
+import { ListBulletIcon, Squares2X2Icon } from "@heroicons/react/16/solid";
+
 export default function Filter() {
   return (
     <div className="flex flex-col gap-6 items-center justify-center p-[4rem] text-[#737373] lg:flex-row lg:justify-between">
       <p className="font-bold">Showing all 12 results</p>
       <div className="flex gap-8 items-center justify-center font-bold">
         <span>Views:</span>
-        <button className="w-10 aspect-square border border-[#ECECEC] rounded-[0.3rem]">
-          <img className="mx-auto" src=".\assets\filter\Vector.svg" alt="" />
+        <button className="w-10 aspect-square flex items-center justify-center border border-[#ECECEC] rounded-[0.3rem]">
+          <Squares2X2Icon className="h-6 w-6 text-gray-500" />
         </button>
-        <button className="w-10 aspect-square border border-[#ECECEC] rounded-[0.3rem]">
-          <img className="mx-auto" src=".\assets\filter\Vector-1.svg" alt="" />
+        <button className="w-10 aspect-square flex items-center justify-center border border-[#ECECEC] rounded-[0.3rem]">
+          <ListBulletIcon className="h-6 w-6 text-gray-500" />
         </button>
       </div>
       <div className="flex gap-5">
