@@ -5,7 +5,7 @@ import Categories from "../components/Categories";
 import Filter from "../components/Filter";
 import ProductCards from "../components/ProductCards";
 
-export default function ShopPage() {
+export default function Shop() {
   return (
     <>
       <PageDir />

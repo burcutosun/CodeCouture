@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 
 export default function ProductCardItem(props) {
   const { products } = props;
+  console.log(products[0].image);
   return (
     <>
       {products.map((product, index) => (
@@ -25,15 +26,6 @@ export default function ProductCardItem(props) {
               <span className="font-bold text-h5 text-[#23856D]">
                 {product.discountedPrice}
               </span>
-            </div>
-            <div className="flex gap-1.5">
-              {product.productColors.map((item, index) => (
-                <span
-                  key={index}
-                  className={`w-6 h-6 rounded-full`}
-                  style={{ backgroundColor: `${item}` }}
-                ></span>
-              ))}
             </div>
           </div>
         </Link>

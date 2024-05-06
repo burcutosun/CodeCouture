@@ -1,16 +1,20 @@
-import { Route, Switch } from "react-router-dom/cjs/react-router-dom.min";
-import ShopPage from "../pages/ShopPage";
-import HomePage from "../pages/HomePage";
+import { Route, Switch } from "react-router-dom";
+import Shop from "../pages/Shop";
+import Home from "../pages/Home";
+import ProductDetail from "../pages/ProductDetail";
 
 export default function PageContent() {
   return (
     <>
       <Switch>
+        <Route exact path="/productdetail/:id">
+          <ProductDetail />
+        </Route>
         <Route exact path="/shop">
-          <ShopPage />
+          <Shop />
         </Route>
         <Route exact path="/">
-          <HomePage />
+          <Home />
         </Route>
       </Switch>
     </>

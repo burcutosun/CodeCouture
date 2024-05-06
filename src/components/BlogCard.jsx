@@ -1,4 +1,9 @@
-import { Link } from "react-router-dom/cjs/react-router-dom.min";
+import {
+  ChartBarIcon,
+  ChevronRightIcon,
+  ClockIcon,
+} from "@heroicons/react/16/solid";
+import { Link } from "react-router-dom";
 
 export default function BlogCard(props) {
   const { content } = props;
@@ -28,20 +33,21 @@ export default function BlogCard(props) {
                 {card.description}
               </p>
               <div className="flex justify-between">
-                <div className="flex gap-2">
-                  <img src=".\assets\blog\coolicon.svg" alt="" />
+                <div className="flex gap-2 items-center">
+                  <ClockIcon className="h-4 w-4 text-[#23A6F0]" />
                   <span className="text-xs">{card.date}</span>
                 </div>
-                <div className="flex gap-2">
-                  <img src=".\assets\blog\Vector.svg" alt="" />
+                <div className="flex gap-2 items-center">
+                  <ChartBarIcon className="h-4 w-4 text-green" />
                   <span className="text-xs">{card.commentCount}</span>
                 </div>
               </div>
               <Link
-                className="flex gap-2 font-bold text-sm text-[#737373]"
+                className="flex gap-2 items-center font-bold text-sm text-[#737373]"
                 to=""
               >
-                Learn More <img src=".\assets\blog\@none.svg" alt="" />
+                Learn More{" "}
+                <ChevronRightIcon className="h-6 w-6 text-[#23A6F0]" />
               </Link>
             </div>
           </div>
