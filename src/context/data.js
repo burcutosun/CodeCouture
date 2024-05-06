@@ -19,6 +19,7 @@ const data = {
       logo: "./assets/brands/Vector-5.png",
     },
   ],
+
   blogContent: [
     {
       image: "./assets/blog/unsplash_gEZkP23pLZ4.png",
@@ -77,6 +78,7 @@ const data = {
       image: "./assets/shop-cards/filter (3).png",
     },
   ],
+
   categoriesShop: [
     {
       image: "./assets/categories/card-cover-5.jpg",
@@ -104,6 +106,94 @@ const data = {
       count: "5 items",
     },
   ],
+
+  footerLinks: [
+    {
+      title: "Company Info",
+      links: [
+        {
+          name: "About Us",
+          to: "",
+        },
+        {
+          name: "Carrier",
+          to: "",
+        },
+        {
+          name: "We are hiring",
+          to: "",
+        },
+        {
+          name: "Blog",
+          to: "",
+        },
+      ],
+    },
+    {
+      title: "Legal",
+      links: [
+        {
+          name: "About Us",
+          to: "",
+        },
+        {
+          name: "Carrier",
+          to: "",
+        },
+        {
+          name: "We are hiring",
+          to: "",
+        },
+        {
+          name: "Blog",
+          to: "",
+        },
+      ],
+    },
+    {
+      title: "Features",
+      links: [
+        {
+          name: "Business Marketing",
+          to: "",
+        },
+        {
+          name: "User Analytic",
+          to: "",
+        },
+        {
+          name: "Live Chat",
+          to: "",
+        },
+        {
+          name: "Unlimited Support",
+          to: "",
+        },
+      ],
+    },
+    {
+      title: "Resources",
+      links: [
+        {
+          name: "IOS & Android",
+          to: "",
+        },
+        {
+          name: "Watch a Demo",
+          to: "",
+        },
+        {
+          name: "Customers",
+          to: "",
+        },
+        {
+          name: "API",
+          to: "",
+        },
+      ],
+    },
+  ],
+
   products: [
     {
       id: "1",
@@ -117,6 +207,8 @@ const data = {
         "https://picsum.photos/348/277?random=1",
         "https://picsum.photos/348/277?random=2",
       ],
+      availability: "In Stock",
+      reviewCount: "0",
     },
     {
       id: "2",
@@ -130,6 +222,8 @@ const data = {
         "https://picsum.photos/348/277?random=1",
         "https://picsum.photos/348/277?random=2",
       ],
+      availability: "In Stock",
+      reviewCount: "0",
     },
     {
       id: "3",
@@ -143,6 +237,8 @@ const data = {
         "https://picsum.photos/348/277?random=1",
         "https://picsum.photos/348/277?random=2",
       ],
+      availability: "In Stock",
+      reviewCount: "0",
     },
     {
       id: "4",
@@ -156,6 +252,8 @@ const data = {
         "https://picsum.photos/348/277?random=1",
         "https://picsum.photos/348/277?random=2",
       ],
+      availability: "In Stock",
+      reviewCount: "0",
     },
     {
       id: "5",
@@ -169,6 +267,8 @@ const data = {
         "https://picsum.photos/348/277?random=1",
         "https://picsum.photos/348/277?random=2",
       ],
+      availability: "In Stock",
+      reviewCount: "0",
     },
     {
       id: "6",
@@ -182,6 +282,8 @@ const data = {
         "https://picsum.photos/348/277?random=1",
         "https://picsum.photos/348/277?random=2",
       ],
+      availability: "In Stock",
+      reviewCount: "0",
     },
     {
       id: "7",
@@ -195,6 +297,8 @@ const data = {
         "https://picsum.photos/348/277?random=1",
         "https://picsum.photos/348/277?random=2",
       ],
+      availability: "In Stock",
+      reviewCount: "0",
     },
     {
       id: "8",
@@ -208,6 +312,8 @@ const data = {
         "https://picsum.photos/348/277?random=1",
         "https://picsum.photos/348/277?random=2",
       ],
+      availability: "In Stock",
+      reviewCount: "0",
     },
     {
       id: "9",
@@ -221,6 +327,8 @@ const data = {
         "https://picsum.photos/348/277?random=1",
         "https://picsum.photos/348/277?random=2",
       ],
+      availability: "In Stock",
+      reviewCount: "0",
     },
     {
       id: "10",
@@ -234,6 +342,8 @@ const data = {
         "https://picsum.photos/348/277?random=1",
         "https://picsum.photos/348/277?random=2",
       ],
+      availability: "In Stock",
+      reviewCount: "0",
     },
     {
       id: "11",
@@ -247,6 +357,8 @@ const data = {
         "https://picsum.photos/348/277?random=1",
         "https://picsum.photos/348/277?random=2",
       ],
+      availability: "In Stock",
+      reviewCount: "0",
     },
     {
       id: "12",
@@ -260,6 +372,8 @@ const data = {
         "https://picsum.photos/348/277?random=1",
         "https://picsum.photos/348/277?random=2",
       ],
+      availability: "In Stock",
+      reviewCount: "0",
     },
     {
       id: "13",
@@ -273,6 +387,8 @@ const data = {
         "https://picsum.photos/348/277?random=1",
         "https://picsum.photos/348/277?random=2",
       ],
+      availability: "In Stock",
+      reviewCount: "0",
     },
     {
       id: "14",
@@ -286,6 +402,8 @@ const data = {
         "https://picsum.photos/348/277?random=1",
         "https://picsum.photos/348/277?random=2",
       ],
+      availability: "In Stock",
+      reviewCount: "0",
     },
     {
       id: "15",
@@ -299,6 +417,8 @@ const data = {
         "https://picsum.photos/348/277?random=1",
         "https://picsum.photos/348/277?random=2",
       ],
+      availability: "In Stock",
+      reviewCount: "0",
     },
     {
       id: "16",
@@ -312,8 +432,11 @@ const data = {
         "https://picsum.photos/348/277?random=1",
         "https://picsum.photos/348/277?random=2",
       ],
+      availability: "In Stock",
+      reviewCount: "0",
     },
   ],
+
   navLinks: [
     {
       title: "Home",

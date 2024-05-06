@@ -11,10 +11,10 @@ export default function Categories() {
         return (
           <div className="relative font-bold text-white">
             <img key={index} className="relative" src={item.image} alt="" />
-            <p className="w-full absolute top-[40%] text-center">
+            <p className="w-full absolute top-[40%] text-center text-h5">
               {item.title}
             </p>
-            <p className="w-full absolute top-[65%] text-center text-sm">
+            <p className="w-full absolute top-[65%] text-center text-paragraph">
               {item.count}
             </p>
           </div>

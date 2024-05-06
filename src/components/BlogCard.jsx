@@ -3,7 +3,7 @@ import {
   ChevronRightIcon,
   ClockIcon,
 } from "@heroicons/react/16/solid";
-import { Link } from "react-router-dom/cjs/react-router-dom.min";
+import { Link } from "react-router-dom";
 
 export default function BlogCard(props) {
   const { content } = props;

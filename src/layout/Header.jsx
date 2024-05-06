@@ -4,53 +4,29 @@ import {
   ShoppingCartIcon,
 } from "@heroicons/react/16/solid";
 import { HeartIcon, UserIcon } from "@heroicons/react/24/outline";
+import { useContext } from "react";
 import { Link } from "react-router-dom";
+import { DataContext } from "../context/DataContext";
 export default function Header() {
-  const navLinks = [
-    {
-      title: "Home",
-      to: "/",
-    },
-    {
-      title: "Shop",
-      to: "/shop",
-    },
-    {
-      title: "About",
-      to: "/about",
-    },
-    {
-      title: "Blog",
-      to: "/blog",
-    },
-    {
-      title: "Contact",
-      to: "/contact",
-    },
-    {
-      title: "Pages",
-      to: "/pages",
-    },
-  ];
+  const data = useContext(DataContext);
+  const { navLinks } = data;
+
   const userMenu = (
-    <div className="flex flex-col gap-5 items-center justify-end lg:flex-row">
-      <Link
-        to=""
-        className="flex gap-1 items-center text-center text-[#23A6F0]"
-      >
-        <UserIcon className="h-6 w-6 text-[#23A6F0]" />
+    <div className="flex flex-col gap-5 items-center justify-end text-mobileMenu text-[#23A6F0] lg:flex-row lg:text-h6">
+      <Link to="" className="flex gap-1 items-center text-center">
+        <UserIcon className="w-[2.5rem] aspect-square lg:w-6" />
         Login / Register
       </Link>
       <Link to="">
-        <MagnifyingGlassIcon className="h-6 w-6 text-[#23A6F0]" />
+        <MagnifyingGlassIcon className="w-[2.5rem] aspect-square text-[#23A6F0] lg:w-6" />
         {}
       </Link>
       <Link to="">
-        <ShoppingCartIcon className="h-6 w-6 text-[#23A6F0]" />
+        <ShoppingCartIcon className="w-[2.5rem] aspect-square text-[#23A6F0] lg:w-6" />
         {}
       </Link>
       <Link to="">
-        <HeartIcon className="h-6 w-6 text-[#23A6F0]" />
+        <HeartIcon className="w-[2.5rem] aspect-square text-[#23A6F0] lg:w-6" />
 
         {}
       </Link>
@@ -58,16 +34,16 @@ export default function Header() {
   );
   return (
     <>
-      <div className="w-screen flex flex-col gap-5 lg:hidden pb-8">
-        <div className="flex justify-between px-[2rem] py-[2rem]">
-          <Link to="/" className="font-bold text-2xl text-[#252B42]">
+      <div className="w-screen flex flex-col gap-5 pb-8 lg:hidden">
+        <div className="flex justify-between p-[2rem]">
+          <Link to="/" className="font-bold text-h3 text-[#252B42]">
             CodeCouture
           </Link>
           <Link to="">
-            <Bars3BottomRightIcon className="h-6 w-6 text-black" />
+            <Bars3BottomRightIcon className="w-[2.5rem] aspect-square text-[#252B42]" />
           </Link>
         </div>
-        <nav className="flex flex-col justify-between gap-[2rem] mx-auto my-[2rem] text-center text-[1.875rem] lg:hidden">
+        <nav className="flex flex-col justify-between gap-[2rem] mx-auto my-[2rem] text-center text-mobileMenu lg:hidden">
           {navLinks.map((item, index) => {
             return (
               <Link key={index} to={item.to}>
@@ -79,8 +55,8 @@ export default function Header() {
         {userMenu}
       </div>
 
-      <div className="hidden lg:grid grid-cols-3 w-screen p-5 bg-[#252B42] items-center justify-between font-bold text-white text-[0.9rem] px-[3rem]">
-        <div className=" flex flex-col xl:flex-row gap-4 justify-start">
+      <div className="hidden lg:grid grid-cols-3 w-screen bg-[#252B42] items-center justify-between p-5 px-[2.5rem] font-bold text-h6 text-[#FFFFFF]">
+        <div className=" flex flex-col gap-4 justify-start xl:flex-row">
           <button className="flex gap-1 items-center">
             <img src=".\assets\hero\nav\phone.svg" alt="Phone Icon" />
             (225) 555-0118
@@ -109,8 +85,8 @@ export default function Header() {
           </Link>
         </div>
       </div>
-      <div className="hidden lg:grid grid-cols-3 w-screen h-[5rem] items-center justify-between font-bold leading-[1.5rem] text-center text-sm px-[3rem]">
-        <Link to="/" className="font-bold text-2xl text-start text-[#252B42]">
+      <div className="hidden lg:grid grid-cols-3 w-screen items-center justify-between p-5 px-[2.5rem] font-bold text-center text-link">
+        <Link to="/" className="font-bold text-h3 text-start text-[#252B42]">
           CodeCouture
         </Link>
         <nav className="flex gap-1 items-center justify-evenly text-[#737373]">
