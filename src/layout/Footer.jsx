@@ -14,19 +14,17 @@ export default function Footer() {
         }`}
       >
         <h3 className="font-bold text-h3 text-[#252B42]">CodeCouture</h3>
-        {path !== "/contact" && (
-          <div className="flex gap-4 items-center">
-            <Link to="" className="">
-              <img src=".\assets\footer\Vector.svg" alt="" />
-            </Link>
-            <Link to="" className="">
-              <img src=".\assets\footer\Vector-1.svg" alt="" />
-            </Link>
-            <Link to="" className="">
-              <img src=".\assets\footer\Vector-2.svg" alt="" />
-            </Link>
-          </div>
-        )}
+        <div className="flex gap-4 items-center">
+          <Link to="" className="">
+            <img src=".\assets\footer\Vector.svg" alt="" />
+          </Link>
+          <Link to="" className="">
+            <img src=".\assets\footer\Vector-1.svg" alt="" />
+          </Link>
+          <Link to="" className="">
+            <img src=".\assets\footer\Vector-2.svg" alt="" />
+          </Link>
+        </div>
       </div>
       <div className="w-full grid grid-rows-4 gap-6 px-12 py-20 lg:grid-rows-1 lg:grid-cols-[15%_15%_15%_15%_34%] lg:px-32">
         {footerLinks.map((item, index) => {

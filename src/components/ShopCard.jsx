@@ -1,4 +1,4 @@
-export default function ShopCardItem(props) {
+export default function ShopCard(props) {
   const { image, index, title } = props;
 
   let shopCardStyle = "relative ";

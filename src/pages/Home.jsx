@@ -2,7 +2,7 @@ import { useContext } from "react";
 import Blog from "../components/Blog";
 import Campaign from "../components/Campaign";
 import Carousel from "../components/Carousel";
-import ProductCards from "../components/ProductCards";
+import Products from "../components/Products";
 import ShopCards from "../components/ShopCards";
 import { DataContext } from "../context/DataContext";
 
@@ -13,7 +13,7 @@ export default function Home() {
     <>
       <Carousel carouselTop={carouselTop} />
       <ShopCards />
-      <ProductCards />
+      <Products />
       <Carousel carouselBottom={carouselBottom} />
       <Campaign />
       <Blog />

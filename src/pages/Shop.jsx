@@ -3,7 +3,7 @@ import Pagination from "../components/Pagination";
 import PageDir from "../components/PageDir";
 import Categories from "../components/Categories";
 import Filter from "../components/Filter";
-import ProductCards from "../components/ProductCards";
+import Products from "../components/Products";
 
 export default function Shop() {
   return (
@@ -11,7 +11,7 @@ export default function Shop() {
       <PageDir />
       <Categories />
       <Filter />
-      <ProductCards />
+      <Products />
       <Pagination />
       <Clients />
     </>

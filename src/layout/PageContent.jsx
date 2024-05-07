@@ -3,6 +3,7 @@ import Shop from "../pages/Shop";
 import Home from "../pages/Home";
 import ProductDetail from "../pages/ProductDetail";
 import Contact from "../pages/Contact";
+import Team from "../pages/Team";
 
 export default function PageContent() {
   return (
@@ -16,6 +17,9 @@ export default function PageContent() {
         </Route>
         <Route exact path="/shop">
           <Shop />
+        </Route>
+        <Route exact path="/team">
+          <Team />
         </Route>
         <Route exact path="/">
           <Home />
