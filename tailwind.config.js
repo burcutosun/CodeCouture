@@ -4,6 +4,9 @@ export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
+      backgroundImage: {
+        'contact': "url('./assets/contact-logos/background.png')"
+      },
       colors: {        
         'default': '#252B42',
         'muted': '#BDBDBD',
