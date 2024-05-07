@@ -59,7 +59,7 @@ export default function Footer() {
           <p className="text-small text-[#737373]">Lore imp sum dolor Amit</p>
         </div>
       </div>
-      <div className="bg-[#FAFAFA] flex items-center justify-center p-[3rem]">
+      <div className="bg-[#FAFAFA] flex items-center justify-center py-[2rem]">
         <p className="w-[14rem] font-bold text-link text-center text-[#737373]">
           Made With Love By Finland All Right Reserved
         </p>
