@@ -3,12 +3,15 @@ import Shop from "../pages/Shop";
 import Home from "../pages/Home";
 import ProductDetail from "../pages/ProductDetail";
 import Contact from "../pages/Contact";
-import Team from "../pages/Team";
+import About from "../pages/About";
 
 export default function PageContent() {
   return (
     <>
       <Switch>
+        <Route exact path="/about">
+          <About />
+        </Route>
         <Route exact path="/contact">
           <Contact />
         </Route>
@@ -17,9 +20,6 @@ export default function PageContent() {
         </Route>
         <Route exact path="/shop">
           <Shop />
-        </Route>
-        <Route exact path="/team">
-          <Team />
         </Route>
         <Route exact path="/">
           <Home />

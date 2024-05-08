@@ -6,13 +6,12 @@ export default function Footer() {
   const data = useContext(DataContext);
   const { footerLinks } = data;
   const path = window.location.pathname;
+  /* ${
+    path === "/" ? "bg-[#FAFAFA]" : "bg-white"
+  } */
   return (
     <div className="w-screen">
-      <div
-        className={`flex flex-col gap-5 items-start p-12 py-16 lg:flex-row lg:justify-between lg:px-[8rem] ${
-          path === "/" ? "bg-[#FAFAFA]" : "bg-white"
-        }`}
-      >
+      <div className="bg-white flex flex-col gap-5 items-start p-12 py-16 lg:flex-row lg:justify-between lg:px-[8rem]">
         <h3 className="font-bold text-h3 text-[#252B42]">CodeCouture</h3>
         <div className="flex gap-4 items-center">
           <Link to="" className="">

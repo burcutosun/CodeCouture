@@ -1,13 +1,13 @@
 import { useContext } from "react";
 import { DataContext } from "../context/DataContext";
-import TeamCard from "../components/TeamCard";
+import TeamCard from "./TeamCard";
 
 export default function Team() {
   const data = useContext(DataContext);
   const { teamMembers } = data;
 
   return (
-    <div className="bg-[#FAFAFA] flex flex-col gap-20 p-20 lg:pb-44 lg:px-80 lg:py-32">
+    <div className="bg-[#FAFAFA] flex flex-col gap-20 p-16 lg:pb-44 lg:px-80 lg:py-28">
       <div className="flex flex-col gap-5 text-center">
         <h2 className="font-bold text-h2 text-default">Meet Our Team</h2>
         <p className="text-paragraph text-second">

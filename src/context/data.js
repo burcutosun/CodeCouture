@@ -458,10 +458,6 @@ const data = {
       title: "Contact",
       to: "/contact",
     },
-    {
-      title: "Team",
-      to: "/team",
-    },
   ],
 
   teamMembers: [
