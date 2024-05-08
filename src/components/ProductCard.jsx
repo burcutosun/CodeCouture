@@ -1,12 +1,12 @@
 import { Link } from "react-router-dom";
 
-export default function ProductCardItem(props) {
+export default function ProductCard(props) {
   const { products } = props;
   return (
     <>
       {products.map((product, index) => (
         <Link
-          className="hover:scale-105"
+          className="shadow-md hover:scale-105"
           key={index}
           to={`/productdetail/${product.id}`}
         >

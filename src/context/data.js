@@ -459,8 +459,41 @@ const data = {
       to: "/contact",
     },
     {
-      title: "Pages",
-      to: "/pages",
+      title: "Team",
+      to: "/team",
+    },
+  ],
+
+  teamMembers: [
+    {
+      image: "https://avatars.githubusercontent.com/u/2324398?v=4",
+      job: "Project Owner",
+      name: "Erhan FIRAT",
+      info: "the quick fox jumps over the lazy dog",
+    },
+    {
+      image: "https://avatars.githubusercontent.com/u/8511119?v=4",
+      job: "Scrum Master",
+      name: "Gökhan ÖZDEMİR",
+      info: "the quick fox jumps over the lazy dog",
+    },
+    {
+      image: "https://picsum.photos/160/160?random=1",
+      job: "Full Stack Developer",
+      name: "Burcu Tosun",
+      info: "the quick fox jumps over the lazy dog",
+    },
+    {
+      image: "https://picsum.photos/160/160?random=2",
+      job: "Team Member",
+      name: "Floyd Miles",
+      info: "the quick fox jumps over the lazy dog",
+    },
+    {
+      image: "https://picsum.photos/160/160?random=3",
+      job: "Team Member",
+      name: "Kristin Watson",
+      info: "the quick fox jumps over the lazy dog",
     },
   ],
 };

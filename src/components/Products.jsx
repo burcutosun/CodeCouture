@@ -1,8 +1,8 @@
 import { useContext } from "react";
-import ProductCardItem from "./ProductCardItem";
+import ProductCard from "./ProductCard";
 import { DataContext } from "../context/DataContext";
 
-export default function ProductCards() {
+export default function Products() {
   const data = useContext(DataContext);
   const { products } = data;
 
@@ -23,7 +23,7 @@ export default function ProductCards() {
         </p>
       </div>
       <div className="grid grid-cols-1 gap-[3rem] lg:grid-cols-4">
-        <ProductCardItem products={products} />
+        <ProductCard products={products} />
       </div>
     </div>
   );

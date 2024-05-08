@@ -5,7 +5,8 @@ export default {
   theme: {
     extend: {
       backgroundImage: {
-        'contact': "url('./assets/contact-logos/background.png')"
+        'contact-mobile': "url('./assets/contact/background-mobile.png')",
+        'contact-desktop': "url('./assets/contact/background-desktop.png')"
       },
       colors: {        
         'default': '#252B42',

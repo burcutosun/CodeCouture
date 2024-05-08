@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import ShopCardItem from "./ShopCardItem";
+import ShopCard from "./ShopCard";
 import { DataContext } from "../context/DataContext";
 
 export default function ShopCards() {
@@ -17,7 +17,7 @@ export default function ShopCards() {
       <div className="grid grid-cols-1 gap-4 lg:grid-cols-3 lg:grid-rows-2">
         {categoriesHome.map((category, index) => {
           return (
-            <ShopCardItem
+            <ShopCard
               image={category.image}
               index={index}
               title={category.title}

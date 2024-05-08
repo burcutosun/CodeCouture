@@ -14,19 +14,17 @@ export default function Footer() {
         }`}
       >
         <h3 className="font-bold text-h3 text-[#252B42]">CodeCouture</h3>
-        {path !== "/contact" && (
-          <div className="flex gap-4 items-center">
-            <Link to="" className="">
-              <img src=".\assets\footer\Vector.svg" alt="" />
-            </Link>
-            <Link to="" className="">
-              <img src=".\assets\footer\Vector-1.svg" alt="" />
-            </Link>
-            <Link to="" className="">
-              <img src=".\assets\footer\Vector-2.svg" alt="" />
-            </Link>
-          </div>
-        )}
+        <div className="flex gap-4 items-center">
+          <Link to="" className="">
+            <img src=".\assets\footer\Vector.svg" alt="" />
+          </Link>
+          <Link to="" className="">
+            <img src=".\assets\footer\Vector-1.svg" alt="" />
+          </Link>
+          <Link to="" className="">
+            <img src=".\assets\footer\Vector-2.svg" alt="" />
+          </Link>
+        </div>
       </div>
       <div className="w-full grid grid-rows-4 gap-6 px-12 py-20 lg:grid-rows-1 lg:grid-cols-[15%_15%_15%_15%_34%] lg:px-32">
         {footerLinks.map((item, index) => {
@@ -61,7 +59,7 @@ export default function Footer() {
           <p className="text-small text-[#737373]">Lore imp sum dolor Amit</p>
         </div>
       </div>
-      <div className="bg-[#FAFAFA] flex items-center justify-center p-[3rem]">
+      <div className="bg-[#FAFAFA] flex items-center justify-center py-[2rem]">
         <p className="w-[14rem] font-bold text-link text-center text-[#737373]">
           Made With Love By Finland All Right Reserved
         </p>
