@@ -13,10 +13,11 @@ export default function Header() {
 
   const userMenu = (
     <div className="flex flex-col gap-5 items-center justify-end text-mobileMenu text-[#23A6F0] lg:flex-row lg:text-h6">
-      <Link to="" className="flex gap-1 items-center text-center">
+      <div className="flex gap-1 items-center text-center">
         <UserIcon className="w-[2.5rem] aspect-square lg:w-6" />
-        Login / Register
-      </Link>
+        <Link to="/login">Login /</Link>
+        <Link to="/signup">Register</Link>
+      </div>
       <Link to="">
         <MagnifyingGlassIcon className="w-[2.5rem] aspect-square text-[#23A6F0] lg:w-6" />
         {}

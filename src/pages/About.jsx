@@ -27,7 +27,7 @@ export default function About() {
           alt=""
         />
       </div>
-      <div className="flex flex-col gap-20 px-24 pt-20 lg:flex-row lg:justify-center lg:p-28 2xl:px-72">
+      <div className="flex flex-col gap-20 px-24 pt-20 lg:flex-row lg:justify-center lg:p-20 2xl:px-56">
         <div className="p-6 text-center lg:text-start">
           <p className="pb-6 text-paragraph text-danger">Problems trying</p>
           <h3 className="font-bold text-h3 text-default">
