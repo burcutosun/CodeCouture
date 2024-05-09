@@ -492,6 +492,25 @@ const data = {
       info: "the quick fox jumps over the lazy dog",
     },
   ],
+
+  stats: {
+    customers: {
+      title: "Happy Customers",
+      count: "15K",
+    },
+    visitors: {
+      title: "Monthly Visitors",
+      count: "150K",
+    },
+    countries: {
+      title: "Countries  Worldwide",
+      count: "15",
+    },
+    partners: {
+      title: "Top Partners",
+      count: "100+",
+    },
+  },
 };
 
 export default data;

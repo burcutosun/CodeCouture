@@ -1,7 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 
 export default {
-  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
+  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}", "./node_modules/flowbite/**/*.js"],
   theme: {
     extend: {
       backgroundImage: {
@@ -9,6 +9,7 @@ export default {
         'contact-desktop': "url('./assets/contact/background-desktop.png')"
       },
       colors: {        
+        'danger': '#E74040',
         'default': '#252B42',
         'muted': '#BDBDBD',
         'primary': '#23A6F0',
@@ -34,5 +35,7 @@ export default {
       }
     },
   },
-  plugins: [],
+  plugins: [
+    require('flowbite/plugin')
+  ],
 };

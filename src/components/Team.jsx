@@ -7,7 +7,7 @@ export default function Team() {
   const { teamMembers } = data;
 
   return (
-    <div className="bg-[#FAFAFA] flex flex-col gap-20 p-16 lg:pb-44 lg:px-80 lg:py-28">
+    <div className="flex flex-col items-center justify-center gap-20 py-20 lg:p-32">
       <div className="flex flex-col gap-5 text-center">
         <h2 className="font-bold text-h2 text-default">Meet Our Team</h2>
         <p className="text-paragraph text-second">
@@ -15,7 +15,7 @@ export default function Team() {
           of Classical physics: Newtonian mechanics{" "}
         </p>
       </div>
-      <div className="flex flex-col gap-10 items-center justify-evenly lg:flex-row">
+      <div className="flex flex-col gap-10 items-center justify-between lg:flex-row">
         {teamMembers.map((item, index) => {
           return <TeamCard member={item} id={index} />;
         })}
