@@ -6,7 +6,7 @@ export default function Categories() {
   const { categoriesShop } = data;
 
   return (
-    <div className="bg-[#FAFAFA] flex flex-col gap-8 items-center p-[5rem] pt-0 lg:flex-row lg:py-8">
+    <div className="bg-[#FAFAFA] flex flex-col gap-8 items-center justify-center pb-28 lg:flex-row lg: lg:pb-20">
       {categoriesShop.map((item, index) => {
         return (
           <div className="relative font-bold text-white">

@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 export default function PageDir() {
   const path = window.location.pathname;
   return (
-    <div className="w-screen bg-[#FAFAFA] flex flex-col items-center p-[3rem] lg:flex-row lg:justify-between lg:py-4">
+    <div className="w-screen bg-[#FAFAFA] flex flex-col items-center p-20 lg:flex-row lg:justify-between lg:py-4">
       {path === "/shop" && (
         <h2 className="font-bold text-h3 text-[#252B42]">Shop</h2>
       )}
