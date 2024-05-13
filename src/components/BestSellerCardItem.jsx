@@ -1,7 +1,10 @@
 import { Link } from "react-router-dom";
+import { useContext } from "react";
+import { DataContext } from "../context/DataContext";
 
-export default function ProductCardItem(props) {
-  const { products } = props;
+export default function ProductCardItem() {
+  const data = useContext(DataContext);
+  const { products } = data;
   console.log(products[0].image);
   return (
     <>
@@ -16,9 +19,9 @@ export default function ProductCardItem(props) {
             <h5 className="font-bold text-h5 text-[#252B42]">
               {product.title}
             </h5>
-            <Link to="" className="font-bold text-link text-[#737373]">
+            <span className="font-bold text-link text-[#737373]">
               {product.category}
-            </Link>
+            </span>
             <div>
               <span className="font-bold text-h5 text-[#BDBDBD] mr-3">
                 {product.price}
