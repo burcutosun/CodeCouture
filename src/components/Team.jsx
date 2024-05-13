@@ -17,7 +17,7 @@ export default function Team() {
       </div>
       <div className="flex flex-col gap-10 items-center justify-between lg:flex-row">
         {teamMembers.map((item, index) => {
-          return <TeamCard member={item} id={index} />;
+          return <TeamCard key={index} member={item} />;
         })}
       </div>
     </div>

@@ -20,8 +20,8 @@ export default function Carousel(props) {
       >
         {images.map((item, index) => {
           return (
-            <SwiperSlide>
-              <div key={index}>
+            <SwiperSlide key={index}>
+              <div>
                 <img
                   className="w-full h-full object-cover object-right-top"
                   src={item}

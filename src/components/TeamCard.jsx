@@ -1,5 +1,5 @@
 export default function TeamCard(props) {
-  const { member, id } = props;
+  const { member } = props;
   return (
     <div className="w-56 h-80 bg-white flex flex-col gap-2 items-center justify-center p-4 shadow-md text-center hover:scale-105">
       <img className="w-40 h-40 rounded-full" src={member.image} alt="" />
