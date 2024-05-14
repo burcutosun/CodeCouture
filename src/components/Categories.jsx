@@ -6,11 +6,14 @@ export default function Categories() {
   const { categoriesShop } = data;
 
   return (
-    <div className="bg-[#FAFAFA] flex flex-col gap-8 items-center justify-center pb-28 lg:flex-row lg: lg:pb-20">
+    <div className="bg-[#FAFAFA] flex flex-col gap-8 items-center justify-center pb-28 lg:flex-row lg:px-16 lg:pb-20">
       {categoriesShop.map((item, index) => {
         return (
-          <div className="relative font-bold text-white">
-            <img key={index} className="relative" src={item.image} alt="" />
+          <div
+            className="relative font-bold text-white hover:scale-105"
+            key={index}
+          >
+            <img className="relative" src={item.image} alt="" />
             <p className="w-full absolute top-[40%] text-center text-h5">
               {item.title}
             </p>

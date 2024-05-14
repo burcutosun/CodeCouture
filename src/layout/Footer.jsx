@@ -11,7 +11,7 @@ export default function Footer() {
   } */
   return (
     <div className="w-screen">
-      <div className="bg-white flex flex-col gap-5 items-start p-12 py-16 lg:flex-row lg:justify-between lg:px-[8rem]">
+      <div className="bg-white flex flex-col gap-5 items-start p-12 lg:flex-row lg:justify-between lg:px-[8rem]">
         <h3 className="font-bold text-h3 text-[#252B42]">CodeCouture</h3>
         <div className="flex gap-4 items-center">
           <Link to="" className="">
@@ -25,7 +25,7 @@ export default function Footer() {
           </Link>
         </div>
       </div>
-      <div className="w-full grid grid-rows-4 gap-6 px-12 py-20 lg:grid-rows-1 lg:grid-cols-[15%_15%_15%_15%_34%] lg:px-32">
+      <div className="w-full grid grid-rows-4 gap-6 px-12 py-16 lg:grid-rows-1 lg:grid-cols-[15%_15%_15%_15%_34%] lg:px-32">
         {footerLinks.map((item, index) => {
           return (
             <div className="flex flex-col justify-between gap-4" key={index}>

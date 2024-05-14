@@ -8,8 +8,8 @@ export default function About() {
   const { stats } = data;
   return (
     <>
-      <div className="flex flex-col gap-10 items-center lg:flex-row lg:justify-evenly lg:px-24">
-        <div className="flex flex-col gap-12 items-center max-w-2xl py-36 lg:items-start lg:p-0">
+      <div className="flex flex-col items-center lg:flex-row lg:justify-center lg:px-24">
+        <div className="flex flex-col gap-12 items-center max-w-2xl py-36 lg:items-start lg:p-0 lg:pl-10">
           <h2 className="mb-8 font-bold text-h2 text-default lg:text-h1">
             ABOUT US
           </h2>
@@ -74,7 +74,7 @@ export default function About() {
         </div>
       </div>
       <div className="p-10">
-        <video class="w-full rounded-3xl lg:w-[70rem] lg:mx-auto" controls>
+        <video className="w-full rounded-3xl lg:w-[70rem] lg:mx-auto" controls>
           <source
             src=".\assets\about\3888252-uhd_4096_2160_25fps.mp4"
             type="video/mp4"

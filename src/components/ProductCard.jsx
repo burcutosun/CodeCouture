@@ -15,9 +15,9 @@ export default function ProductCard(props) {
             <h5 className="font-bold text-h5 text-[#252B42]">
               {product.title}
             </h5>
-            <Link to="" className="font-bold text-link text-[#737373]">
+            <span className="font-bold text-link text-[#737373]">
               {product.category}
-            </Link>
+            </span>
             <div>
               <span className="font-bold text-h5 text-[#BDBDBD] mr-3">
                 {product.price}

@@ -6,6 +6,7 @@ import Login from "../pages/Login";
 import ProductDetail from "../pages/ProductDetail";
 import Shop from "../pages/Shop";
 import SignUp from "../pages/SignUp";
+import SignUpSuccess from "../components/SignUpSuccess";
 
 export default function PageContent() {
   return (
@@ -31,6 +32,9 @@ export default function PageContent() {
         </Route>
         <Route exact path="/signup">
           <SignUp />
+        </Route>
+        <Route exact path="/signup_success">
+          <SignUpSuccess />
         </Route>
       </Switch>
     </>
