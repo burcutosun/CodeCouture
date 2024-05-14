@@ -8,9 +8,11 @@ export default function Products() {
 
   const path = window.location.pathname;
   let headerStyle = "w-[18rem] mb-[4rem] text-center";
+
   if (path !== "/") {
     headerStyle += " hidden";
   }
+
   return (
     <div className="w-screen flex flex-col items-center py-[3rem] lg:px-[3rem]">
       <div className={headerStyle}>

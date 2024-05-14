@@ -7,6 +7,7 @@ import { Link } from "react-router-dom";
 
 export default function BlogCard(props) {
   const { content } = props;
+
   return (
     <>
       {content.map((card, index) => {

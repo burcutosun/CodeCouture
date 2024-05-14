@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 
 export default function PageDir() {
   const path = window.location.pathname;
+
   return (
     <div className="w-screen bg-[#FAFAFA] flex flex-col items-center p-20 lg:flex-row lg:justify-between lg:py-4">
       {path === "/shop" && (

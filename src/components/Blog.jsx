@@ -5,6 +5,7 @@ import { DataContext } from "../context/DataContext";
 export default function Blog() {
   const data = useContext(DataContext);
   const { blogContent } = data;
+
   return (
     <div className="w-screen flex flex-col items-center py-[5rem] lg:py-[6rem]">
       <div className="w-[13.5rem] mb-[4rem] text-center lg:w-[43rem]">

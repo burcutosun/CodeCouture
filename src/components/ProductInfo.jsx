@@ -25,6 +25,7 @@ export default function ProductInfo(props) {
   if (!selected) {
     return <div className="text-center">Ürün bulunamadı.</div>;
   }
+
   //dropdown paragraph
   const [displayInfo, setDisplayInfo] = useState({ id: null, status: false });
 
@@ -32,6 +33,7 @@ export default function ProductInfo(props) {
     setDisplayInfo({ id: id, status: !displayInfo.status });
   };
   //
+
   return (
     <>
       <div className="bg-[#FAFAFA] p-8">
