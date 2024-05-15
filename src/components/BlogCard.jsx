@@ -12,7 +12,7 @@ export default function BlogCard(props) {
     <>
       {content.map((card, index) => {
         return (
-          <div key={index} className="p-[2rem] shadow-md">
+          <div key={index} className="p-[2rem] shadow-md hover:scale-105">
             <img src={card.image} alt="" />
             <div className="flex flex-col gap-6 p-4">
               <div>

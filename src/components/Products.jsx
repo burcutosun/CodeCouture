@@ -14,7 +14,7 @@ export default function Products() {
   }
 
   return (
-    <div className="w-screen flex flex-col items-center py-[3rem] lg:px-[3rem]">
+    <div className="flex flex-col items-center py-12 lg:px-12">
       <div className={headerStyle}>
         <h2 className="text-h4 text-[#737373]">Featured Products</h2>
         <h3 className="font-bold text-h3 text-[#252B42]">

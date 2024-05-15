@@ -1,7 +1,7 @@
-import { DataProvider } from "./context/DataContext";
 import Footer from "./layout/Footer";
 import Header from "./layout/Header";
 import PageContent from "./layout/PageContent";
+import { DataProvider } from "./context/DataContext";
 
 function App() {
   return (

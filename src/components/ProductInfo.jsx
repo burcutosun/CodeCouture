@@ -30,7 +30,13 @@ export default function ProductInfo(props) {
   const [displayInfo, setDisplayInfo] = useState({ id: null, status: false });
 
   const handleDisplay = (id) => {
-    setDisplayInfo({ id: id, status: !displayInfo.status });
+    setDisplayInfo((prevDisplayInfo) => {
+      if (prevDisplayInfo.id === id) {
+        return { id: id, status: !prevDisplayInfo.status };
+      } else {
+        return { id: id, status: true };
+      }
+    });
   };
   //
 

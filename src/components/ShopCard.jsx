@@ -1,7 +1,7 @@
 export default function ShopCard(props) {
   const { image, index, title } = props;
 
-  let shopCardStyle = "relative ";
+  let shopCardStyle = "relative hover:scale-105 ";
   shopCardStyle += index > 1 ? "lg:row-span-1" : "lg:row-span-2";
 
   return (

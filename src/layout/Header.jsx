@@ -16,7 +16,7 @@ export default function Header() {
       <div className="flex gap-1 items-center text-center">
         <UserIcon className="w-[2.5rem] aspect-square lg:w-6" />
         <Link to="/login">Login /</Link>
-        <Link to="/signup">Register</Link>
+        <Link to="/signup">Sign Up</Link>
       </div>
       <Link to="">
         <MagnifyingGlassIcon className="w-[2.5rem] aspect-square text-[#23A6F0] lg:w-6" />
@@ -74,16 +74,16 @@ export default function Header() {
         <div className="flex gap-4 items-center justify-end">
           <h6>Follow Us :</h6>
           <Link to="">
-            <img src=".\assets\hero\nav\instagram.svg" alt="Instagram Icon" />
-          </Link>
-          <Link to="">
-            <img src=".\assets\hero\nav\youtube.svg" alt="Youtube Icon" />
-          </Link>
-          <Link to="">
             <img src=".\assets\hero\nav\facebook.svg" alt="Facebook Icon" />
           </Link>
           <Link to="">
+            <img src=".\assets\hero\nav\instagram.svg" alt="Instagram Icon" />
+          </Link>
+          <Link to="">
             <img src=".\assets\hero\nav\twitter.svg" alt="Twitter Icon" />
+          </Link>
+          <Link to="">
+            <img src=".\assets\hero\nav\youtube.svg" alt="Youtube Icon" />
           </Link>
         </div>
       </div>
