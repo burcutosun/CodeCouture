@@ -1,11 +1,12 @@
-import { Link } from "react-router-dom";
 import { useContext } from "react";
+import { Link } from "react-router-dom";
 import { DataContext } from "../context/DataContext";
 
 export default function ProductCardItem() {
   const data = useContext(DataContext);
   const { products } = data;
   console.log(products[0].image);
+
   return (
     <>
       {products.map((product, index) => (

@@ -8,9 +8,11 @@ export default function Products() {
 
   const path = window.location.pathname;
   let headerStyle = "w-[18rem] mb-[4rem] text-center";
+
   if (path !== "/") {
     headerStyle += " hidden";
   }
+
   return (
     <div className="flex flex-col items-center py-12 lg:px-12">
       <div className={headerStyle}>

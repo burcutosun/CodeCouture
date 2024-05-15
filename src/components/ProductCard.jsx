@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 
 export default function ProductCard(props) {
   const { products } = props;
+
   return (
     <>
       {products.map((product, index) => (
