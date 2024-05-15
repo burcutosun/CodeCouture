@@ -19,7 +19,7 @@ export default function ShopCards() {
           return (
             <ShopCard
               image={category.image}
-              key={index}
+              id={index}
               title={category.title}
             />
           );
