@@ -33,7 +33,8 @@ export default function SignUp() {
   useEffect(() => {
     API.get("/roles")
       .then((res) => {
-        setRoles(res.data);
+        const sorted = res.data.reverse();
+        setRoles(sorted);
       })
       .catch((err) => {
         console.error(err);
@@ -216,7 +217,7 @@ export default function SignUp() {
                 >
                   {roles.map((role, index) => {
                     return (
-                      index > 0 && (
+                      index < 2 && (
                         <option key={index} value={role.id}>
                           {role.name}
                         </option>
