@@ -216,9 +216,11 @@ export default function SignUp() {
                 >
                   {roles.map((role, index) => {
                     return (
-                      <option key={index} value={role.id}>
-                        {role.name}
-                      </option>
+                      index > 0 && (
+                        <option key={index} value={role.id}>
+                          {role.name}
+                        </option>
+                      )
                     );
                   })}
                 </select>
