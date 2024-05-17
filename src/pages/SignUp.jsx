@@ -1,8 +1,8 @@
 import { API } from "../api/api";
 import { useEffect, useState } from "react";
-import { useHistory } from "react-router-dom";
 import { useForm } from "react-hook-form";
-import { ToastContainer, toast } from "react-toastify";
+import { useHistory } from "react-router-dom";
+import { toast } from "react-toastify";
 
 export default function SignUp() {
   const {
@@ -33,7 +33,8 @@ export default function SignUp() {
   useEffect(() => {
     API.get("/roles")
       .then((res) => {
-        setRoles(res.data);
+        const sorted = res.data.reverse();
+        setRoles(sorted);
       })
       .catch((err) => {
         console.error(err);
@@ -57,7 +58,6 @@ export default function SignUp() {
         bank_account: data.bank_account,
       };
     }
-    console.log(formData);
     API.post("/signup", formData)
       .then((res) => {
         history.push("/signup_success");
@@ -79,7 +79,7 @@ export default function SignUp() {
   const turkeyPhoneRegex = /^5(0[5-7]|[3-5]\d) ?\d{3} ?\d{4}$/;
 
   return (
-    <div className="lg:w-[65%] xl:w-[55%] max-w-3xl mx-auto py-24">
+    <div className="lg:w-[65%] xl:w-[55%] max-w-3xl mx-auto my-24">
       <form onSubmit={handleSubmit(onSubmit)}>
         <div className="m-4 p-24 pt-16 rounded-lg shadow-lg space-y-12">
           <h2 className="font-bold text-h3 text-gray-900">Sign Up</h2>
@@ -97,7 +97,7 @@ export default function SignUp() {
                   type="text"
                   id="name"
                   placeholder="John Doe"
-                  className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                  className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-blue-400 sm:text-sm sm:leading-6"
                   {...register("name", {
                     required: "Name is required (*)",
                     minLength: {
@@ -126,7 +126,7 @@ export default function SignUp() {
                   id="email"
                   type="email"
                   placeholder="john@doe.com"
-                  className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                  className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-blue-400 sm:text-sm sm:leading-6"
                   {...register("email", {
                     required: "Email is required (*)",
                     pattern: {
@@ -154,7 +154,7 @@ export default function SignUp() {
                 <input
                   type="password"
                   id="password"
-                  className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                  className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-blue-400 sm:text-sm sm:leading-6"
                   {...register("password", {
                     required: "Password is required (*)",
                     pattern: {
@@ -183,7 +183,7 @@ export default function SignUp() {
                 <input
                   type="password"
                   id="confirmPassword"
-                  className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                  className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-blue-400 sm:text-sm sm:leading-6"
                   {...register("confirmPassword", {
                     validate: (value) =>
                       value === ""
@@ -210,15 +210,17 @@ export default function SignUp() {
               <div className="mt-2">
                 <select
                   id="role_id"
-                  className="block w-full rounded-md border-0 px-3 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:max-w-xs sm:text-sm sm:leading-6"
+                  className="block w-full rounded-md border-0 px-3 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-blue-400 sm:max-w-xs sm:text-sm sm:leading-6"
                   {...register("role_id", {})}
                   value={watch("role_id")}
                 >
                   {roles.map((role, index) => {
                     return (
-                      <option key={index} value={role.id}>
-                        {role.name}
-                      </option>
+                      index < 2 && (
+                        <option key={index} value={role.id}>
+                          {role.name}
+                        </option>
+                      )
                     );
                   })}
                 </select>
@@ -243,7 +245,7 @@ export default function SignUp() {
                     <input
                       id="store_name"
                       type="text"
-                      className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                      className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-blue-400 sm:text-sm sm:leading-6"
                       {...register("store_name", {
                         required: "Store name is required (*)",
                       })}
@@ -268,7 +270,7 @@ export default function SignUp() {
                       id="phone"
                       placeholder="(5xx)-xxx-xxxx"
                       type="tel"
-                      className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                      className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-blue-400 sm:text-sm sm:leading-6"
                       {...register("phone", {
                         required: "Phone number is required (*)",
                         pattern: {
@@ -296,7 +298,7 @@ export default function SignUp() {
                     <input
                       id="tax_no"
                       type="text"
-                      className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                      className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-blue-400 sm:text-sm sm:leading-6"
                       {...register("tax_no", {
                         required: "Tax ID is required (*)",
                         pattern: {
@@ -324,7 +326,7 @@ export default function SignUp() {
                     <input
                       id="bank_account"
                       type="text"
-                      className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                      className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-blue-400 sm:text-sm sm:leading-6"
                       {...register("bank_account", {
                         required: "IBAN is required (*)",
                         pattern: {
@@ -355,7 +357,7 @@ export default function SignUp() {
           </button>
           <button
             type="submit"
-            className={`flex items-center rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 ${
+            className={`flex items-center rounded-md bg-blue-500 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-blue-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-500 ${
               isLoading ? "opacity-60 cursor-not-allowed" : ""
             }`}
           >
@@ -381,7 +383,6 @@ export default function SignUp() {
           </button>
         </div>
       </form>
-      <ToastContainer position="top-right" />
     </div>
   );
 }

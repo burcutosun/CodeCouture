@@ -5,6 +5,9 @@ const initialState = {
   roles: [],
   theme: "",
   language: "",
+  isAuthenticated: false,
+  token: null,
+  error: null,
 };
 
 const clientReducer = (state = initialState, action) => {
@@ -17,6 +20,20 @@ const clientReducer = (state = initialState, action) => {
       return { ...state, theme: action.payload };
     case "SET_LANGUAGE":
       return { ...state, language: action.payload };
+    case "LOGIN_SUCCESS":
+      return {
+        ...state,
+        isAuthenticated: true,
+        token: action.payload.token,
+      };
+    case "LOGIN_FAILURE":
+      return {
+        ...state,
+        isAuthenticated: false,
+        error: action.payload,
+      };
+    case "LOGOUT":
+      return initialState;
     default:
       return state;
   }
