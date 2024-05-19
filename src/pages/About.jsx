@@ -13,11 +13,11 @@ export default function About() {
           <h2 className="mb-8 font-bold text-h2 text-default lg:text-h1">
             ABOUT US
           </h2>
-          <h4 className="px-[6.5rem] text-center text-h4 text-second lg:pl-0 lg:text-start">
+          <h4 className="px-24 text-center text-h4 text-second lg:pl-0 lg:text-start">
             We know how large objects will act, but things on a small scale just
             do not act that way.
           </h4>
-          <button className="w-48 h-12 bg-primary rounded-[5px] font-bold text-btnText text-white">
+          <button className="w-48 h-12 bg-primary rounded-md font-bold text-btnText text-white">
             Get Quote Now
           </button>
         </div>

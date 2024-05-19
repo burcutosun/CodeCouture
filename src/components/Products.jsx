@@ -7,7 +7,7 @@ export default function Products() {
   const { products } = data;
 
   const path = window.location.pathname;
-  let headerStyle = "w-[18rem] mb-[4rem] text-center";
+  let headerStyle = "w-72 mb-16 text-center";
 
   if (path !== "/") {
     headerStyle += " hidden";
@@ -16,15 +16,13 @@ export default function Products() {
   return (
     <div className="flex flex-col items-center py-12 lg:px-12">
       <div className={headerStyle}>
-        <h2 className="text-h4 text-[#737373]">Featured Products</h2>
-        <h3 className="font-bold text-h3 text-[#252B42]">
-          BESTSELLER PRODUCTS
-        </h3>
-        <p className="text-paragraph text-[#737373]">
+        <h2 className="text-h4 text-second">Featured Products</h2>
+        <h3 className="font-bold text-h3 text-default">BESTSELLER PRODUCTS</h3>
+        <p className="text-paragraph text-second">
           Problems trying to resolve the conflict between{" "}
         </p>
       </div>
-      <div className="grid grid-cols-1 gap-[3rem] lg:grid-cols-4">
+      <div className="grid grid-cols-1 gap-12 lg:grid-cols-4">
         <ProductCard products={products} />
       </div>
     </div>

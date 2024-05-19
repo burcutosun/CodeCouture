@@ -47,18 +47,18 @@ export default function Header() {
             <Link to="/login">Login /</Link>
             <Link to="/signup">Sign Up</Link>
           </>
-        )}
+        )}  
       </div>
       <Link to="">
-        <MagnifyingGlassIcon className="w-[2.5rem] aspect-square text-[#23A6F0] lg:w-6" />
+        <MagnifyingGlassIcon className="w-10 aspect-square text-primary lg:w-6" />
         {}
       </Link>
       <Link to="">
-        <ShoppingCartIcon className="w-[2.5rem] aspect-square text-[#23A6F0] lg:w-6" />
+        <ShoppingCartIcon className="w-10 aspect-square text-primary lg:w-6" />
         {}
       </Link>
       <Link to="">
-        <HeartIcon className="w-[2.5rem] aspect-square text-[#23A6F0] lg:w-6" />
+        <HeartIcon className="w-10 aspect-square text-primary lg:w-6" />
 
         {}
       </Link>
@@ -68,15 +68,15 @@ export default function Header() {
   return (
     <>
       <div className="w-screen flex flex-col gap-5 pb-8 lg:hidden">
-        <div className="flex justify-between p-[2rem]">
-          <Link to="/" className="font-bold text-h3 text-[#252B42]">
+        <div className="flex justify-between p-8">
+          <Link to="/" className="font-bold text-h3 text-default">
             CodeCouture
           </Link>
           <Link to="">
-            <Bars3BottomRightIcon className="w-[2.5rem] aspect-square text-[#252B42]" />
+            <Bars3BottomRightIcon className="w-10 aspect-square text-default" />
           </Link>
         </div>
-        <nav className="flex flex-col justify-between gap-[2rem] mx-auto my-[2rem] text-center text-mobileMenu lg:hidden">
+        <nav className="flex flex-col justify-between gap-8 mx-auto my-8 text-center text-mobileMenu lg:hidden">
           {navLinks.map((item, index) => {
             return (
               <Link key={index} to={item.to}>
@@ -88,7 +88,7 @@ export default function Header() {
         {userMenu}
       </div>
 
-      <div className="hidden lg:grid grid-cols-3 w-screen bg-[#252B42] items-center justify-between p-5 px-12 font-bold text-h6 text-[#FFFFFF]">
+      <div className="hidden lg:grid grid-cols-3 w-screen bg-default items-center justify-between p-5 px-10 font-bold text-h6 text-[#FFFFFF]">
         <div className=" flex flex-col gap-4 justify-start xl:flex-row">
           <button className="flex gap-1 items-center">
             <img src=".\assets\hero\nav\phone.svg" alt="Phone Icon" />
@@ -118,11 +118,12 @@ export default function Header() {
           </Link>
         </div>
       </div>
-      <div className="hidden lg:grid grid-cols-3 w-screen items-center justify-between p-5 px-12 font-bold text-center text-link">
-        <Link to="/" className="font-bold text-h3 text-start text-[#252B42]">
+
+      <div className="hidden lg:grid grid-cols-3 w-screen items-center justify-between p-5 px-10 font-bold text-center text-link">
+        <Link to="/" className="font-bold text-h3 text-start text-default">
           CodeCouture
         </Link>
-        <nav className="flex gap-1 items-center justify-evenly text-[#737373]">
+        <nav className="flex gap-1 items-center justify-evenly text-second">
           {navLinks.map((item, index) => {
             if (item === "Shop") {
               return (

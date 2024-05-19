@@ -7,10 +7,10 @@ export default function ShopCards() {
   const { categoriesHome } = data;
 
   return (
-    <div className="w-screen bg-[#FAFAFA] flex flex-col items-center py-[6rem] lg:px-[3rem]">
-      <div className="w-[18rem] mb-[4rem] text-center">
-        <h2 className="font-bold text-h3 text-[#252B42]">EDITOR'S PICK</h2>
-        <p className="text-paragraph text-[#737373]">
+    <div className="w-screen bg-[#FAFAFA] flex flex-col items-center pb-28 pt-24 lg:px-12">
+      <div className="w-56 mb-16 text-center">
+        <h2 className="font-bold text-h3 text-default">EDITOR'S PICK</h2>
+        <p className="text-paragraph text-second">
           Problems trying to resolve the conflict between
         </p>
       </div>

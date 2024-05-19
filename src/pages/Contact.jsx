@@ -8,7 +8,7 @@ export default function Contact() {
         Problems trying to resolve the conflict between the two major realms of
         Classical physics:{" "}
       </p>
-      <button className="w-60 h-16 bg-[#23A6F0] rounded-[5px] font-bold text-btnText text-white">
+      <button className="w-60 h-16 bg-[#23A6F0] rounded-md font-bold text-btnText text-white">
         CONTACT OUR COMPANY
       </button>
     </div>
