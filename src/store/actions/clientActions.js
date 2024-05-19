@@ -17,3 +17,17 @@ export const setLanguage = (language) => ({
   type: "SET_LANGUAGE",
   payload: language,
 });
+
+export const setLoginSuccess = (token) => ({
+  type: "LOGIN_SUCCESS",
+  payload: { token },
+});
+
+export const setLoginFailure = (error) => ({
+  type: "LOGIN_FAILURE",
+  payload: error,
+});
+
+export const setLogout = () => ({
+  type: "LOGOUT",
+});
