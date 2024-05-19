@@ -52,7 +52,7 @@ export default function ProductInfo(props) {
               ))}
             </div>
           </div>
-          <div className="flex flex-col gap-6 p-[3rem]">
+          <div className="flex flex-col gap-6 p-12">
             <h4 className="font-bold text-h4 text-default">Floating Phone</h4>
             <div className="flex gap-2 items-center">
               <StarIcon className="h-6 w-6 text-[#F3CD03]" />
@@ -85,20 +85,20 @@ export default function ProductInfo(props) {
               ))}
             </div>
             <div className="w-full flex gap-4 mt-8">
-              <button className="w-[9.25rem] h-[2.75rem] bg-primary mr-2 rounded-[0.4rem] font-bold text-h6 text-white">
+              <button className="w-36 h-12 bg-primary mr-2 rounded-md font-bold text-h6 text-white">
                 Select Options
               </button>
-              <button className="w-[2.5rem] aspect-square border border-muted rounded-full text-default">
+              <button className="w-10 aspect-square border border-muted rounded-full text-default">
                 <span className="material-symbols-outlined grid center">
                   favorite
                 </span>
               </button>
-              <button className="w-[2.5rem] aspect-square border border-muted rounded-full text-default">
+              <button className="w-10 aspect-square border border-muted rounded-full text-default">
                 <span className="material-symbols-outlined grid center">
                   shopping_cart
                 </span>
               </button>
-              <button className="w-[2.5rem] aspect-square border border-muted rounded-full text-default">
+              <button className="w-10 aspect-square border border-muted rounded-full text-default">
                 <span className="material-symbols-outlined grid center">
                   visibility
                 </span>
@@ -156,7 +156,7 @@ export default function ProductInfo(props) {
                   {displayInfo.id === "1" && displayInfo.status ? (
                     <ChevronDownIcon className="h-6 w-6 text-gray-500" />
                   ) : (
-                    <ChevronRightIcon className="w-6 h-6 text-[#BDBDBD]" />
+                    <ChevronRightIcon className="w-6 h-6 text-muted" />
                   )}
                   the quick fox jumps over the lazy dog
                 </button>
@@ -175,7 +175,7 @@ export default function ProductInfo(props) {
                   {displayInfo.id === "2" && displayInfo.status ? (
                     <ChevronDownIcon className="h-6 w-6 text-gray-500" />
                   ) : (
-                    <ChevronRightIcon className="w-6 h-6 text-[#BDBDBD]" />
+                    <ChevronRightIcon className="w-6 h-6 text-muted" />
                   )}
                   the quick fox jumps over the lazy dog
                 </button>
@@ -194,7 +194,7 @@ export default function ProductInfo(props) {
                   {displayInfo.id === "3" && displayInfo.status ? (
                     <ChevronDownIcon className="h-6 w-6 text-gray-500" />
                   ) : (
-                    <ChevronRightIcon className="w-6 h-6 text-[#BDBDBD]" />
+                    <ChevronRightIcon className="w-6 h-6 text-muted" />
                   )}
                   the quick fox jumps over the lazy dog
                 </button>
@@ -213,7 +213,7 @@ export default function ProductInfo(props) {
                   {displayInfo.id === "4" && displayInfo.status ? (
                     <ChevronDownIcon className="h-6 w-6 text-gray-500" />
                   ) : (
-                    <ChevronRightIcon className="w-6 h-6 text-[#BDBDBD]" />
+                    <ChevronRightIcon className="w-6 h-6 text-muted" />
                   )}
                   the quick fox jumps over the lazy dog
                 </button>
@@ -239,7 +239,7 @@ export default function ProductInfo(props) {
                   {displayInfo.id === "5" && displayInfo.status ? (
                     <ChevronDownIcon className="h-6 w-6 text-gray-500" />
                   ) : (
-                    <ChevronRightIcon className="w-6 h-6 text-[#BDBDBD]" />
+                    <ChevronRightIcon className="w-6 h-6 text-muted" />
                   )}
                   the quick fox jumps over the lazy dog
                 </button>
@@ -258,7 +258,7 @@ export default function ProductInfo(props) {
                   {displayInfo.id === "6" && displayInfo.status ? (
                     <ChevronDownIcon className="h-6 w-6 text-gray-500" />
                   ) : (
-                    <ChevronRightIcon className="w-6 h-6 text-[#BDBDBD]" />
+                    <ChevronRightIcon className="w-6 h-6 text-muted" />
                   )}
                   the quick fox jumps over the lazy dog
                 </button>
@@ -277,7 +277,7 @@ export default function ProductInfo(props) {
                   {displayInfo.id === "7" && displayInfo.status ? (
                     <ChevronDownIcon className="h-6 w-6 text-gray-500" />
                   ) : (
-                    <ChevronRightIcon className="w-6 h-6 text-[#BDBDBD]" />
+                    <ChevronRightIcon className="w-6 h-6 text-muted" />
                   )}
                   the quick fox jumps over the lazy dog
                 </button>
@@ -296,7 +296,7 @@ export default function ProductInfo(props) {
                   {displayInfo.id === "8" && displayInfo.status ? (
                     <ChevronDownIcon className="h-6 w-6 text-gray-500" />
                   ) : (
-                    <ChevronRightIcon className="w-6 h-6 text-[#BDBDBD]" />
+                    <ChevronRightIcon className="w-6 h-6 text-muted" />
                   )}
                   the quick fox jumps over the lazy dog
                 </button>
