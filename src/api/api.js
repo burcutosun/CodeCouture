@@ -10,3 +10,4 @@ export const createApiInstance = () => {
 };
 
 export let API = createApiInstance();
+//http://localhost:8000/ecommerce/v1/api

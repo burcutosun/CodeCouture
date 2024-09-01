@@ -17,7 +17,7 @@ export default function Header() {
   const dispatch = useDispatch();
 
   const handleLogout = () => {
-    user.isLoggedIn = false;
+    localStorage.getItem("token") ? localStorage.removeItem("token") : null;
     dispatch(setLogout());
   };
 
@@ -47,7 +47,7 @@ export default function Header() {
             <Link to="/login">Login /</Link>
             <Link to="/signup">Sign Up</Link>
           </>
-        )}  
+        )}
       </div>
       <Link to="">
         <MagnifyingGlassIcon className="w-10 aspect-square text-primary lg:w-6" />
