@@ -3,26 +3,25 @@ import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { toast } from "react-toastify";
 import { Link } from "react-router-dom";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import {
   setLoginSuccess,
   setUser,
   setRoles,
 } from "../store/actions/clientActions";
-import { getRoles } from "../store/actions/thunkActions";
 import gravatar from "gravatar";
-import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
+import { useHistory } from "react-router-dom";
 
 export default function Login() {
   const {
     handleSubmit,
     register,
     formState: { errors },
+    watch,
   } = useForm({
     defaultValues: {
       email: "",
       password: "",
-      rememberMe: false,
     },
     mode: "onBlur",
   });
@@ -30,6 +29,8 @@ export default function Login() {
   const [isLoading, setIsLoading] = useState(false);
   const dispatch = useDispatch();
   const history = useHistory();
+  const isAuthenticated = useSelector((state) => state.client.isAuthenticated);
+  const rememberMe = watch("rememberMe");
 
   const login = async (formData) => {
     const getGravatar = (email) => {
@@ -41,11 +42,12 @@ export default function Login() {
     try {
       const response = await API.post("/login", formData);
       const data = response.data;
-
       if (data && data.token) {
         const gravatarUrl = getGravatar(data.email);
 
-        formData.rememberMe && localStorage.setItem("token", data.token);
+        if (rememberMe) {
+          localStorage.setItem("token", data.token);
+        }
 
         dispatch(
           setUser({
@@ -58,13 +60,11 @@ export default function Login() {
 
         dispatch(setLoginSuccess(data.token));
 
-        const roles = await getRoles();
-        const role = roles.find((item) => item.id === data.role_id);
-        dispatch(setRoles(role));
+        /*         const roles = await getRoles();
+        const role = roles.find((item) => item.id === data.role_id); */
 
         toast.success("Logged in successfully!");
-
-        history.length > 0 ? history.goBack() : history.push("/");
+        history.push("/");
       } else {
         toast.error("Login failed: Invalid response from server");
       }

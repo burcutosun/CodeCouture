@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 import { useHistory } from "react-router-dom";
 import { toast } from "react-toastify";
+import { getRoles } from "../store/actions/thunkActions";
 
 export default function SignUp() {
   const {
@@ -31,18 +32,19 @@ export default function SignUp() {
   const selectedRole = watch("role_id");
 
   useEffect(() => {
-    API.get("/roles")
-      .then((res) => {
-        const sorted = res.data.reverse();
-        setRoles(sorted);
-      })
-      .catch((err) => {
-        console.error(err);
-      });
+    const fetchAndSetRoles = async () => {
+      const roles = await getRoles();
+      roles
+        ? setRoles(roles.reverse())
+        : console.error("Roles data is not an array:", roles);
+    };
+
+    fetchAndSetRoles();
   }, []);
 
   const onSubmit = (data) => {
     setIsLoading(true);
+
     const formData = {
       name: data.name,
       email: data.email,
@@ -58,6 +60,29 @@ export default function SignUp() {
         bank_account: data.bank_account,
       };
     }
+
+    /*     const userDto = {
+      name: data.name,
+      email: data.email,
+      password: data.password,
+      roleId: selectedRole,
+    };
+
+    const storeDto =
+      selectedRole === "2"
+        ? {
+            name: data.store_name,
+            phone: data.phone,
+            taxNo: data.tax_no,
+            bankAccount: data.bank_account,
+          }
+        : null;
+
+    const formData = {
+      user: userDto,
+      store: storeDto,
+    }; */
+
     API.post("/signup", formData)
       .then((res) => {
         history.push("/signup_success");
