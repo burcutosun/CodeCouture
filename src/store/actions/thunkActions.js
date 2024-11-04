@@ -1,5 +1,6 @@
 import { API } from "../../api/api";
-import { setUser, setRoles, setLoginSuccess, setLogout } from "./clientActions";
+import { setUser, setLoginSuccess, setLogout } from "./clientActions";
+import { setRoles } from "./globalActions";
 
 export const getRoles = async () => {
   try {
@@ -56,5 +57,15 @@ export const checkAuth = () => async (dispatch) => {
     dispatch(setLogout());
     localStorage.removeItem("token");
     console.log("No token found, logging out.");
+  }
+};
+
+export const getCategories = async () => {
+  try {
+    const response = await API.get("/categories");
+    console.log(response);
+    return response.data;
+  } catch (err) {
+    return [];
   }
 };

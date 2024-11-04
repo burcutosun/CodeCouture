@@ -4,11 +4,7 @@ import { useForm } from "react-hook-form";
 import { toast } from "react-toastify";
 import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-import {
-  setLoginSuccess,
-  setUser,
-  setRoles,
-} from "../store/actions/clientActions";
+import { setLoginSuccess, setUser } from "../store/actions/clientActions";
 import gravatar from "gravatar";
 import { useHistory } from "react-router-dom";
 
